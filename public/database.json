@@ -1,0 +1,6 @@
+{ "products" : [
+    {"id": 1, "titulo": "Producto A", "descripcion": "Descripcion del productoA", "precio": 1000, "categoria": "A"},
+    {"id": 2, "titulo": "Producto B", "descripcion": "Descripcion del productoB", "precio": 1500, "categoria": "B"},
+    {"id": 3, "titulo": "Producto C", "descripcion": "Descripcion del productoC", "precio": 2000, "categoria": "C"},
+    {"id": 4, "titulo": "Producto D", "descripcion": "Descripcion del productoD", "precio": 2500, "categoria": "D"}
+    ] }
