@@ -1,4 +1,5 @@
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
 import logoOff from '../assets/logoOff.png';
 
@@ -8,7 +9,8 @@ const NavBar = () => {
     <div>
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <img src={logoOff} alt=""></img>
+        <Link to="/"><img src={logoOff} alt=""></img></Link>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
