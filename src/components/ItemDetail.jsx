@@ -1,7 +1,7 @@
 import ItemCount from './ItemCount';
 
 function ItemDetail({ product }) {
-
+  
   return (
     <div>
       {product && (

@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './Item';
 
 function ItemList({ products }) {
+  
   return (
     <div className="container">
       <h1>PRODUCTOS</h1>

@@ -17,15 +17,17 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/products">Shop</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
             <NavDropdown title="Productos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Equipamiento</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              Indumentaria
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Protección</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Indumentaria Personalizada
-              </NavDropdown.Item>
+            <ul className="list-unstyled">
+              <li>
+              <Link className="text-decoration-none text-black ms-3" to="/category/equipamiento">Equipamiento</Link>
+              </li>
+              <li>
+              <Link className="text-decoration-none text-black ms-3" to="/category/indumentaria">Indumentaria</Link>
+              </li>
+              <li>
+              <Link className="text-decoration-none text-black ms-3" to="/category/proteccion">Proteccion</Link>
+              </li>
+              </ul>
             </NavDropdown>
           </Nav>
           <Nav>
