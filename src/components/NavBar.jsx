@@ -15,16 +15,16 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features">Shop</Nav.Link>
-            <Nav.Link href="#pricing">Contact</Nav.Link>
-            <NavDropdown title="Products" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <Nav.Link href="#pricing">Contacto</Nav.Link>
+            <NavDropdown title="Productos" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Equipamiento</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+              Indumentaria
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Protección</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Indumentaria Personalizada
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

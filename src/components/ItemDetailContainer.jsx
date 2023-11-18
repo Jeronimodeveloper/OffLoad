@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 function ItemDetailContainer() {
 
   const [ product, setProduct] = useState([])
-
   const {paramsId} = useParams()
 
   useEffect(() => {
@@ -13,7 +12,7 @@ function ItemDetailContainer() {
       try {
         const response = await fetch('../database.json');
         const data = await response.json();
-        setProduct(data.products.find((p)=> {p === paramsId}));
+        setProduct(data.products.find((p) => p.id === parseInt(paramsId)));
        
       } catch (error) {
         console.error("Error de llamada del producto", error)

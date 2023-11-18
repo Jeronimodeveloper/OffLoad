@@ -1,27 +1,27 @@
-import ItemCount from "./ItemCount"
+import ItemCount from './ItemCount';
 
-function ItemDetail({product}) {
-console.log(product)
+function ItemDetail({ product }) {
 
   return (
-    {product.length > 0 && (
+    <div>
+      {product && (
         <div>
-      <section>
-        <h5>{product.nombre}</h5>
-        <p>{product.descripcion}</p>
-        <img src={product.imagen}/>
-        <p>{product.precio}</p>
-        <p>{product.categoria}</p>
-      </section>
+          <section>
+            <img src={product.imagen} alt={product.nombre} />
+            <h5>{product.nombre}</h5>
+            <p>{product.descripcion}</p>
+            <p>{product.precio}</p>
+          </section>
 
-      <footer>
-        <button className='Option'>Agregar al Carrito</button>
-      </footer>
+          <footer>
+            <button className='Option'>Agregar al Carrito</button>
+          </footer>
 
-      <ItemCount/>
-      </div>
+          <ItemCount />
+        </div>
       )}
-  )
+    </div>
+  );
 }
 
-export default ItemDetail
+export default ItemDetail;

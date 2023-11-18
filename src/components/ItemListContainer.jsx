@@ -8,7 +8,7 @@ const ItemListContainer = () => {
     useEffect(() => {
       const getData = async () => {
         try {
-          const response = await fetch('./database.json');
+          const response = await fetch('../database.json');
           const data = await response.json();
           setProducts(data.products);
         } catch (error) {
@@ -19,7 +19,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-     <ItemList products={products}/>
+    <ItemList products={products}/>
     </div> )
 }
 
