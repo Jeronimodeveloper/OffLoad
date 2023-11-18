@@ -15,7 +15,6 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/products">Shop</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
             <NavDropdown title="Productos" id="collasible-nav-dropdown">
             <ul className="list-unstyled">
               <li>

@@ -9,11 +9,13 @@ const addToCart =()=>{
 }
 
 return (
-    <div>
-    <Button variant="light" onClick={() => setCount(count - 1)}>-</Button>
-    <Badge bg="danger">{count}</Badge>
-    <Button variant="light" onClick={() => setCount(count + 1)}>+</Button>
-    <Button variant="dark" onClick={addToCart}>Agregar al carrito</Button>
+    <div className="d-flex flex-column align-items-center">
+        <div>
+            <Button variant="light" onClick={() => setCount(count - 1)}>-</Button>
+            <Badge bg="primary">{count}</Badge>
+            <Button variant="light" onClick={() => setCount(count + 1)}>+</Button>
+        </div>
+        <button onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
     </div>
 )
 }

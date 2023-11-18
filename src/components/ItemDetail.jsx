@@ -5,17 +5,13 @@ function ItemDetail({ product }) {
   return (
     <div>
       {product && (
-        <div>
-          <section>
-            <img src={product.imagen} alt={product.nombre} />
+        <div >
+          <section className="d-flex flex-column align-items-center">
+            <img src={product.imagen} alt={product.nombre} className="w-25" />
             <h5>{product.nombre}</h5>
             <p>{product.descripcion}</p>
             <p>{product.precio}</p>
           </section>
-
-          <footer>
-            <button className='Option'>Agregar al Carrito</button>
-          </footer>
 
           <ItemCount />
         </div>
