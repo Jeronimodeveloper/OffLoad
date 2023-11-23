@@ -8,11 +8,11 @@ function Item({product}) {
       <section className="d-flex flex-column align-items-center">
         <img src={product.imagen} alt={product.nombre} className="w-50"/>
         <h5>{product.nombre}</h5>
-        <p>{product.precio}</p>
+        <p>$ {product.precio}</p>
       </section>
 
       <footer className="d-flex flex-column align-items-center">
-        <button className='Option btn btn-primary mb-3' >
+        <button className='Option btn bg-black border-0 text-white ms-4 px-3 h-100 mb-3' >
           <Link to ={"/item/"+product.id} className="text-decoration-none text-white">Ver Datalle</Link>
         </button>
       </footer>
