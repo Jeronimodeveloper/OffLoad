@@ -1,4 +1,4 @@
-import { createContext, useState} from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 
 export const CartContext = createContext()
@@ -16,16 +16,15 @@ export const CartProvider = ({children}) => {
         const isInCart = newCart.find((producto) => producto.id === itemAdded.id);
 
         if (isInCart) {
-            isInCart.cantidad += cantidad;
+            isInCart.amount += amount;
         } else {
             newCart.push(itemAdded);
         }
         setCart(newCart)
-        localStorage.setItem()
     }
 
-    const mountInCart = () => {
-        return cart.reduce((acc, prod) => acc + prod.amount, 0);
+    const amountInCart = () => {
+        return cart.reduce((acc, prod) => acc + Number(prod.amount, 0));
     }
 
     const totalPrice = () => {
@@ -36,16 +35,13 @@ export const CartProvider = ({children}) => {
         setCart([]);
     }
 
-    useEffect(() => {
-            localStorage.setItem("cart", JSON.stringify(cart))
-    }, [cart])
-
 
     return(
         <CartContext.Provider value={{
             cart, 
+            setCart,
             addToCart,
-            mountInCart,
+            amountInCart,
             totalPrice,
             clearCart
             }}>

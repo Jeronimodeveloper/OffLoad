@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
+import { CartContext } from '../context/CartContext'
 
-function ItemCount({ stock }) {
+function ItemCount({ product }) {
 
+  const { Cart, addToCart } = useContext(CartContext);
   const [count, setCount] = useState(1);
 
   function handleSub() {
@@ -12,7 +14,7 @@ function ItemCount({ stock }) {
     }
     
   function handleAdd() {
-    count < Number(stock)
+    count < Number(product.stock)
       ? setCount(count + 1)
       : toast.error(stock + " no hay mas en Stock por el momento.");
     }
@@ -44,7 +46,9 @@ function ItemCount({ stock }) {
       </div>
 
       <div>
-        <button className="bg-black text-white rounded-3 px-4 py-2 mt-1">
+        <button 
+        onClick={() => addToCart(product, count)}
+        className="bg-black text-white rounded-3 px-4 py-2 mt-1">
           AGREGAR AL CARRITO
         </button>
       </div>

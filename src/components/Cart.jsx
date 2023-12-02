@@ -1,9 +1,12 @@
 import React, { useContext } from 'react'
-import { CartContext } from './context/CartContext'
+import { CartContext } from '../context/CartContext'
 
 const Cart = () => {
 
-    const { cart } = useContext(CartContext);
+    const { cart, totalPrice, clearCart } = useContext(CartContext);
+    const handlerClear = () => {
+        clearCart();
+    }
 
     return (
     <div className= "container">
@@ -19,6 +22,8 @@ const Cart = () => {
                 </div>
             ))
         }
+        <h2> PRECIO FINAL: $ {totalPrice()}</h2>
+        <button onClick={handlerClear}>Vaciar carro</button>
     </div>
     )
 }

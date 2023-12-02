@@ -14,7 +14,7 @@ function ItemDetail({ product }) {
               <p>$ {product.precio}</p>
             </section>
 
-          <ItemCount stock={product.stock} />
+          <ItemCount product={product} />
         </div>
       )}
       </div>
