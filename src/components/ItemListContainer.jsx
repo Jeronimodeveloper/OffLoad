@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
-const { catname } = useParams()
+    
+    const { catname } = useParams()
 
     const [ products, setProducts] = useState([])
 
@@ -13,7 +14,6 @@ const { catname } = useParams()
         try {
           const response = await fetch('../database.json');
           const data = await response.json();
-          console.log(catname)
 
           if (catname !== undefined) {
             setProducts(data.products.filter((p)=> p.categoria === catname))
