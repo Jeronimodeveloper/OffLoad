@@ -3,20 +3,18 @@ import { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext()
 
-const initalCart = JSON.parse(localStorage.getItem("cart")) || [];
-
 export const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState([initalCart]);
+    const [cart, setCart] = useState([]);
 
-    const addToCart = (item, amount) => {
-        const itemAdded = {...item, amount};
+    const addToCart = (item, cantidad) => {
+        const itemAdded = {...item, cantidad};
 
         const newCart = [...cart];
-        const isInCart = newCart.find((producto) => producto.id === itemAdded.id);
+        const isInCart = newCart.find((product) => product.id === itemAdded.id);
 
         if (isInCart) {
-            isInCart.amount += amount;
+            isInCart.cantidad += cantidad;
         } else {
             newCart.push(itemAdded);
         }
@@ -24,11 +22,12 @@ export const CartProvider = ({children}) => {
     }
 
     const amountInCart = () => {
-        return cart.reduce((acc, prod) => acc + Number(prod.amount, 0));
+        return cart.reduce((acc, prod) => acc + Number(prod.cantidad),0);
     }
 
     const totalPrice = () => {
-        return cart.reduce((acc, prod) => acc + prod.price * prod.amount, 0)
+        console.log( cart.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0))
+        return cart.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
     }
 
     const clearCart = () => {

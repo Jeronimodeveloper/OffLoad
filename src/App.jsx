@@ -18,6 +18,7 @@ const App = () => {
               <Route path="/products" element={<ItemListContainer/>} />
               <Route path='/category/:catname' element={<ItemListContainer/>} />
               <Route path='/item/:id' element={<ItemDetailContainer/>} />
+              <Route path='/cart' element={<Cart/>} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

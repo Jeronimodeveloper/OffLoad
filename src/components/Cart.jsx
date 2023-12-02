@@ -7,7 +7,6 @@ const Cart = () => {
     const handlerClear = () => {
         clearCart();
     }
-
     return (
     <div className= "container">
         <h1 className="">CARRITO</h1>
@@ -18,7 +17,8 @@ const Cart = () => {
                     <h2>{prod.titulo}</h2>
                     <p>Precio por unidad: $ {prod.precio}</p>
                     <p>Precio total: $ {prod.precio * prod.cantidad}</p>
-                    <p>Cantidad: {prod.cantidad}</p>
+                    <p>Cantidad: {Number(prod.cantidad)}</p>
+                    <br />
                 </div>
             ))
         }
