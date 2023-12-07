@@ -1,23 +1,26 @@
-import ItemDetail from "./ItemDetail"
 import { useEffect, useState } from "react";
+import ItemDetail from "./ItemDetail"
 import { useParams } from 'react-router-dom'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
+
 
 function ItemDetailContainer() {
 
-  const [ product, setProduct] = useState([])
-  const { id } = useParams()
+  const [product, setProduct] = useState([]);
+  const id = useParams().id;
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch('../database.json');
-        const data = await response.json();
-        setProduct(data.products.find((p) => p.id === parseInt(id)));
-      } catch (error) {
-        console.error("Error de llamada del producto", error)
-      }
-    }; getData()
-  }, []);
+    
+    const docData = doc(db, "productos", id);
+    getDoc(docData)
+      .then((resp) => {
+        setProduct(
+          { ...resp.data(), id: resp.id }
+          );
+      })
+
+  }, [id]);
 
 
   return (
