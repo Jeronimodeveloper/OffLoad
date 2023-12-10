@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
 import Home from './components/Home'
+import CheckOut from './components/CheckOut'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path='/category/:categoria' element={<ItemListContainer/>} />
                 <Route path='/item/:id' element={<ItemDetailContainer/>} />
                 <Route path='/cart' element={<Cart/>} />
+                <Route path='/checkout' element={<CheckOut/>} />
             </Routes>
         </BrowserRouter>
       </CartProvider>
