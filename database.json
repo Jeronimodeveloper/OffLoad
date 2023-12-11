@@ -1,0 +1,86 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "nombre": "Pelota de Rugby",
+        "descripcion": "Pelota oficial de tamaño y peso estándar para práctica de rugby.",
+        "precio": 29.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/0/6/1/1061-large_default.jpg",
+        "categoria": "equipamiento",
+        "stock": 6
+      },
+      {
+        "id": 2,
+        "nombre": "Jersey de Equipo",
+        "descripcion": "Jersey de alta calidad para jugar al rugby. Disponible en varios colores y tallas.",
+        "precio": 49.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/8/2/3/1823-large_default.jpg",
+        "categoria": "indumentaria",
+        "stock": 6
+      },
+      {
+        "id": 3,
+        "nombre": "Protectores Bucales",
+        "descripcion": "Protectores bucales diseñados para brindar protección durante el juego.",
+        "precio": 14.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/9/2/8/1928-large_default.jpg",
+        "categoria": "proteccion",
+        "stock": 6
+      },
+      {
+        "id": 4,
+        "nombre": "Botas de Rugby",
+        "descripcion": "Botas diseñadas para proporcionar tracción y soporte en el campo de juego.",
+        "precio": 79.99,
+        "imagen": "https://www.rugbytienda.es/img/p/2/2/7/3/2273-large_default.jpg",
+        "categoria": "equipamiento",
+        "stock": 6
+      },
+      {
+        "id": 5,
+        "nombre": "Shorts de Rugby",
+        "descripcion": "Shorts duraderos y cómodos ideales para jugar al rugby.",
+        "precio": 34.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/2/6/9/1269-large_default.jpg",
+        "categoria": "indumentaria",
+        "stock": 6
+      },
+      {
+        "id": 6,
+        "nombre": "Casco Protector",
+        "descripcion": "Casco de alta resistencia para proteger la cabeza durante el juego.",
+        "precio": 59.99,
+        "imagen": "https://www.rugbytienda.es/img/p/3/6/3/363-large_default.jpg",
+        "categoria": "proteccion",
+        "stock": 6
+      },
+      {
+        "id": 7,
+        "nombre": "Bolsa Deporte",
+        "descripcion": "Bolsa espaciosa para transportar todo tu equipo de rugby de manera cómoda.",
+        "precio": 39.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/4/7/9/1479-large_default.jpg",
+        "categoria": "equipamiento",
+        "stock": 6
+      },
+      {
+        "id": 8,
+        "nombre": "Sudadera",
+        "descripcion": "Conos resistentes para entrenamientos y prácticas de agilidad.",
+        "precio": 19.99,
+        "imagen": "https://www.rugbytienda.es/img/p/1/5/6/0/1560-large_default.jpg",
+        "categoria": "indumentaria",
+        "stock": 6
+      },
+      {
+        "id": 9,
+        "nombre": "Hombreras",
+        "descripcion": "Botella de agua diseñada para deportistas, ideal para mantenerse hidratado.",
+        "precio": 9.99,
+        "imagen": "https://www.rugbytienda.es/img/p/6/0/60-large_default.jpg",
+        "categoria": "proteccion",
+        "stock": 6
+      }
+    ]
+  }
+  
