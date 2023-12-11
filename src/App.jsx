@@ -15,7 +15,6 @@ const App = () => {
       <CartProvider>
         <BrowserRouter>
           <NavBar />
-            <Home />
               <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path="/products" element={<ItemListContainer/>} />
@@ -23,10 +22,10 @@ const App = () => {
                 <Route path='/item/:id' element={<ItemDetailContainer/>} />
                 <Route path='/cart' element={<Cart/>} />
                 <Route path='/checkout' element={<CheckOut/>} />
-            </Routes>
+              </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
-      <Footer/>
     </>
   )
 }
