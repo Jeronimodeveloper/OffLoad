@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <CartProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='/offLoad'>
           <NavBar />
           <Banner/>
               <Routes>
