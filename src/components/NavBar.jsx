@@ -4,7 +4,6 @@ import CartWidget from './CartWidget'
 import logoOff from '../assets/logoOff.png'
 
 const NavBar = () => {
-  
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">

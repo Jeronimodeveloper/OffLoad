@@ -7,7 +7,7 @@ import { CartProvider } from './context/CartContext'
 import Cart from './components/Cart'
 import Home from './components/Home'
 import CheckOut from './components/CheckOut'
-
+import Banner from './components/Banner'
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
       <CartProvider>
         <BrowserRouter>
           <NavBar />
+          <Banner/>
               <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path="/products" element={<ItemListContainer/>} />
