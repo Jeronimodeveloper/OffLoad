@@ -10,7 +10,6 @@ const NavBar = () => {
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
           <Link to="/"><img src={logoOff} alt=""></img></Link>
-
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -29,15 +28,12 @@ const NavBar = () => {
                 </ul>
               </NavDropdown>
             </Nav>
-
             <Nav>
               <CartWidget />
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      
     </>
   )
 }

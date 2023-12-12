@@ -3,11 +3,11 @@ import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-
     const { cart, totalPrice, clearCart } = useContext(CartContext);
     const handlerClear = () => {
         clearCart();
     }
+
     return (
     <div className= "container d-flex flex-column align-items-center">
         <h1 className="">CARRITO</h1>
@@ -24,7 +24,6 @@ const Cart = () => {
         <h3 className="border rounded-4 p-3" > PRECIO FINAL: $ {totalPrice()}</h3>
         <Link to="/checkout" className='Option btn bg-black border-0 text-white px-3 h-100 mt-4 mb-3'>Completar Compra</Link>
         <button onClick={handlerClear} className='Option btn bg-danger border-0 text-white px-3 h-100 mt-2 mb-1 btn-sm'>Vaciar carro</button>
-        
     </div>
     )
 }

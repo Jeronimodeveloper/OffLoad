@@ -3,7 +3,6 @@ import { Toaster, toast } from "react-hot-toast";
 import { CartContext } from '../context/CartContext'
 
 function ItemCount({ product }) {
-
   const { Cart, addToCart } = useContext(CartContext);
   const [count, setCount] = useState(1);
 

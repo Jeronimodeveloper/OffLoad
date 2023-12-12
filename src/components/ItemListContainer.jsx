@@ -5,27 +5,20 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../firebase/config'
 
 const ItemListContainer = () => {
-    
   const [ products, setProducts] = useState([]);
-
   const categoria = useParams().categoria;
 
     useEffect(() => {
-      
       const productosData = collection(db, "productos");
-
       const q = categoria ? query(productosData, where("categoria", "==", categoria)) : productosData;
-
       getDocs(q)
-      .then((resp) => {
-                
+      .then((resp) => {       
         setProducts(
           resp.docs.map((doc) => {
             return { ...doc.data(), id: doc.id }
           })
         )
       })
-      
     }, [categoria]);
 
   return (
