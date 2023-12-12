@@ -1,6 +1,10 @@
-# React + Vite
+# OffLoad Market
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    **E-comerce** desarrollado en ReactJs + Vite. Entrega final para la academia CoderHouse.
+
+## Deploy:
+
+    https://jeronimodeveloper.github.io/offLoad/
 
 Currently, two official plugins are available:
 
